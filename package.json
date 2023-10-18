@@ -1,0 +1,24 @@
+{
+  "name": "mailsenderawssdkv3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danizavtz/mailsenderawssdkv3.git"
+  },
+  "author": "danizavtz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danizavtz/mailsenderawssdkv3/issues"
+  },
+  "homepage": "https://github.com/danizavtz/mailsenderawssdkv3#readme",
+  "dependencies": {
+    "@aws-sdk/client-sesv2": "^3.430.0",
+    "express": "^4.18.2"
+  }
+}
