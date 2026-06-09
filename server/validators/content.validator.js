@@ -1,9 +1,9 @@
 const { body, validationResult } = require('express-validator');
 
 exports.validationBodyRules = [
-    body('email', 'email é obrigatório').exists(),
-    body('subject', 'assunto é obrigatório').exists(),
-    body('message', 'mensagem é obrigatório').exists(),
+    body('email', 'email é obrigatório').exists().bail(),
+    body('subject', 'assunto é obrigatório').exists().bail(),
+    body('message', 'mensagem é obrigatório').exists().bail(),
     body('email').trim().notEmpty().withMessage('email não pode ser vazio').bail(),
     body('email').isEmail().withMessage('email deve ser um email válido').bail(),
     body('subject').trim().notEmpty().withMessage('assunto é obrigatório').bail(),
