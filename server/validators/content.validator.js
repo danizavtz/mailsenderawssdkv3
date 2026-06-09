@@ -6,9 +6,9 @@ exports.validationBodyRules = [
     body('message', 'message is required').exists(),
     body('email', 'email is required').notEmpty(),
     body('email', 'email is required').isEmail(),
-    body('title', 'title is required').notEmpty().isLenght({ max: 32 }),
+    body('title', 'title is required').notEmpty().isLength({ max: 32 }),
     body('message', 'message is required').notEmpty(),
-    body('message', 'message is required').isLenght({ max: 1000 })
+    body('message', 'message is required').isLength({ max: 1000 })
 ];
 
 exports.checkRules = (req, res, next) => {
