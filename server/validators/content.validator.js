@@ -4,10 +4,10 @@ exports.validationBodyRules = [
     body('email', 'email is required').exists(),
     body('title', 'title is required').exists(),
     body('message', 'message is required').exists(),
-    body('email', 'email is required').notEmpty(),
+    body('email', 'email is required').trim().notEmpty(),
     body('email', 'email is required').isEmail(),
-    body('title', 'title is required').notEmpty().isLength({ max: 32 }),
-    body('message', 'message is required').notEmpty(),
+    body('title', 'title is required').trim().notEmpty().isLength({ max: 32 }),
+    body('message', 'message is required').trim().notEmpty(),
     body('message', 'message is required').isLength({ max: 1000 })
 ];
 
