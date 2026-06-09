@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-import cors from "cors";
+const cors = require('cors');
 const allowedOrigins = [
     "https://danizavtz.com.br",
     "https://app.danizavtz.com.br"
