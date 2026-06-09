@@ -22,7 +22,7 @@ router.post('/contact', contentValidator.validationBodyRules, contentValidator.c
         Content: { // EmailContent
           Simple: { // Message
             Subject: { // Content
-              Data: req.body.title, // required
+              Data: req.body.subject, // required
               Charset: "UTF-8",
             },
             Body: { // Body
