@@ -19,6 +19,7 @@
   "homepage": "https://github.com/danizavtz/mailsenderawssdkv3#readme",
   "dependencies": {
     "@aws-sdk/client-sesv2": "^3.430.0",
+    "cors": "^2.8.6",
     "express": "^5.2.1"
   }
 }
