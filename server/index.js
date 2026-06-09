@@ -8,11 +8,11 @@ router.get('/', (req, res) => {
     res.status(200).json(req.servermsg);
 });
 
-router.post('/', async (req, res) => {
+router.post('/contact', async (req, res) => {
     const input = { // SendEmailRequest
         FromEmailAddress: "contato@danizavtz.com.br",
         ReplyToAddresses: [
-          "daniellucena@yahoo.com.br",
+          "contato@danizavtz.com.br",
         ],
         Destination: { // Destination
             ToAddresses: [ // EmailAddressList
