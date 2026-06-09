@@ -2,13 +2,13 @@ const router = require('express').Router();
 const { SESv2Client, SendEmailCommand } = require("@aws-sdk/client-sesv2");
 const config = { region: 'us-east-1' } // configure a region em que está configurado o SES
 const client = new SESv2Client(config);
-
+const contentValidator = require('../server/validators/content.validator');
 router.get('/', (req, res) => {
     req.servermsg = { msg: "server up and running" };
     res.status(200).json(req.servermsg);
 });
 
-router.post('/contact', async (req, res) => {
+router.post('/contact', contentValidator.validationBodyRules, contentValidator.checkRules, async (req, res) => {
     const input = { // SendEmailRequest
         FromEmailAddress: "contato@danizavtz.com.br",
         ReplyToAddresses: [
